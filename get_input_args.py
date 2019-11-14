@@ -41,9 +41,5 @@ def get_input_args():
     parser.add_argument('--dogfile', type = str, default = 'dognames.txt', help = 'path to the folder of pet images')
 
     args = parser.parse_args()
-    print("Argument 1: "+args.dir)
-    print("Arguement 2: "+args.arch)
-    print("Argument 3: "+args.dogfile)
     
     return args
-

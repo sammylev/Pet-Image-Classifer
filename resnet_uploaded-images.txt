@@ -1,0 +1,78 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:              guinea_pig_01.jpg  label:                 guinea pig
+ 2 key:                     dog_01.jpg  label:                        dog
+ 3 key:                     dog_02.jpg  label:                        dog
+ 4 key:                 bow_tie_01.jpg  label:                    bow tie
+ 5 key:                   panda_01.jpg  label:                      panda
+
+     MATCH:
+
+             guinea_pig_01.jpg: 
+Real:                 guinea pig   Classifier:       guinea pig, cavia cobaya
+
+                    dog_01.jpg: 
+Real:                        dog   Classifier:                   pug, pug-dog
+
+                    dog_02.jpg: 
+Real:                        dog   Classifier:                   pug, pug-dog
+
+                bow_tie_01.jpg: 
+Real:                    bow tie   Classifier:       bow tie, bow-tie, bowtie
+
+                  panda_01.jpg: 
+Real:                      panda   Classifier: giant panda, panda, panda bear, coon bear, ailuropoda melanoleuca
+
+ NOT A MATCH:
+
+# Total Images 5 # Matches: 5 # NOT Matches: 0
+{'guinea_pig_01.jpg': ['guinea pig', 'guinea pig, cavia cobaya', 1, 0, 0], 'dog_01.jpg': ['dog', 'pug, pug-dog', 1, 1, 1], 'dog_02.jpg': ['dog', 'pug, pug-dog', 1, 1, 1], 'bow_tie_01.jpg': ['bow tie', 'bow tie, bow-tie, bowtie', 1, 0, 0], 'panda_01.jpg': ['panda', 'giant panda, panda, panda bear, coon bear, ailuropoda melanoleuca', 1, 0, 0]}
+
+     MATCH:
+
+             guinea_pig_01.jpg: 
+Real:                 guinea pig   Classifier:       guinea pig, cavia cobaya  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    dog_01.jpg: 
+Real:                        dog   Classifier:                   pug, pug-dog  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    dog_02.jpg: 
+Real:                        dog   Classifier:                   pug, pug-dog  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                bow_tie_01.jpg: 
+Real:                    bow tie   Classifier:       bow tie, bow-tie, bowtie  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                  panda_01.jpg: 
+Real:                      panda   Classifier: giant panda, panda, panda bear, coon bear, ailuropoda melanoleuca  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+# Total Images 5 # Matches: 5 # NOT Matches: 0
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  5  N Dog Images:  2  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  5  N Dog Images:  2  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+Model Architecture: RESNET
+Number of Images: 5
+Number of Dog Images: 2
+Number of Not A Dog Images: 3
+Percent of Correct Dogs: 100.00
+Percent of Correct Breed: 100.00
+Percent of Correct Not a Dog: 100.00
+Percent Match: 100.00
+
+** Total Elapsed Runtime: 0:0:0

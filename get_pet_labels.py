@@ -36,17 +36,29 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
+    
     filename_list = listdir(image_dir);
     results_dic = dict()
     parsed_list = list()
     
     for filename in filename_list:
+        if (not(filename.startswith("."))):
+            name = ""
+            filename_without_ext = filename.split(".")[0]
+            all_words = filename_without_ext.split("_")
+            for word in all_words:
+                if (word.isalpha()):
+                    name += word + " "
+        final_name = [name.lower().strip()]
+        results_dic[filename] = final_name
+            
+    """
+    for filename in filename_list:
         parsed_list = filename.split("_")
         name = str()
         for x in range(len(parsed_list)-1):
             name += str(parsed_list[x]).lower() + " "
-        results_dic[filename] = name.strip()
-        
-    print(results_dic)
-    
+        final_list = [name.strip()]
+        results_dic[filename] = final_list
+    """
     return results_dic
